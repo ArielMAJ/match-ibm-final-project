@@ -1,3 +1,6 @@
+run:
+	poetry run python app/app.py
+
 install:
 	pip install poetry
 	poetry install
