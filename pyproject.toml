@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "match-ibm-final-project"
-version = "0.1.0"
+version = "0.2.0"
 description = "[Match-IBM] Projeto Final: 06 - Calculadora de Meta Financeira com Economia Mensal"
 authors = ["ArielMAJ <ariel.maj@hotmail.com>"]
 license = "MIT"
