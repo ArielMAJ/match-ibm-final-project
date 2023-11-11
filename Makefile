@@ -9,3 +9,6 @@ install:
 
 pre-commit:
 	poetry run pre-commit run
+
+bump-version:
+	poetry version minor
