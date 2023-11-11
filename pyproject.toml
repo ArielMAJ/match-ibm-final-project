@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "match-ibm-final-project"
+version = "0.1.0"
+description = "[Match-IBM] Projeto Final: 06 - Calculadora de Meta Financeira com Economia Mensal"
+authors = ["ArielMAJ <ariel.maj@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "^3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+flake8 = "^6.1.0"
+isort = "^5.12.0"
+pylint = "^3.0.2"
+mypy = "^1.7.0"
+pre-commit = "^3.5.0"
+
+[tool.black]
+target-version = ['py311']
+line-length = 79
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
