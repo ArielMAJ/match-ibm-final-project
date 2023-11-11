@@ -1,5 +1,5 @@
 run:
-	poetry run python app/app.py
+	poetry run python api/index.py
 
 install:
 	pip install poetry
