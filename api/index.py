@@ -1,7 +1,7 @@
 """App's entrypoint file."""
 
-import routes
-from config import Config
+from api import routes
+from api.config import Config
 from flask import Flask
 from flask.blueprints import Blueprint
 from flask_cors import CORS
@@ -19,7 +19,9 @@ def create_app(config_name):
     return _app
 
 
+app = create_app(Config)
+
+
 if __name__ == "__main__":
-    app = create_app(Config)
     cors = CORS(app, resources={r"/*": {"origins": "*"}})
     app.run(host=Config.HOST, port=Config.PORT, debug=Config.DEBUG)
