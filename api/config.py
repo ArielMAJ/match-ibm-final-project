@@ -16,3 +16,12 @@ class Config:
     PORT = int(os.getenv("APPLICATION_PORT", "3000"))
 
     APPLICATION_ROOT = os.getenv("APPLICATION_ROOT", "")
+
+
+class TestConfig(Config):
+    """Test configuration."""
+
+    ENVIRONMENT = "TEST"
+    TESTING = True
+    DEBUG = False
+    PRESERVE_CONTEXT_ON_EXCEPTION = False
