@@ -25,18 +25,42 @@ class FinancialGoalResource(Resource):
                 ),
                 HTTPStatus.BAD_REQUEST,
             )
-        if request.json["monthly_savings"] <= 0:
+        if not (monthly_savings := request.json.pop("monthly_savings", None)):
+            return make_response(
+                {
+                    "months": None,
+                    "message": "Request should include the monthly savings.",
+                },
+                HTTPStatus.BAD_REQUEST,
+            )
+        if not (goal := request.json.pop("goal")):
+            return make_response(
+                {"months": None, "message": "Request should include the goal."},
+                HTTPStatus.BAD_REQUEST,
+            )
+        try:
+            monthly_savings = float(monthly_savings)
+            goal = float(goal)
+        except ValueError:
+            return make_response(
+                {
+                    "months": None,
+                    "message": "Monthly savings and goal should be numbers.",
+                },
+                HTTPStatus.BAD_REQUEST,
+            )
+        if monthly_savings <= 0:
             return make_response(
                 {"months": None, "message": "Monthly savings should be positive."},
                 HTTPStatus.BAD_REQUEST,
             )
-        if request.json["goal"] <= 0:
+        if goal <= 0:
             return make_response(
                 {"months": None, "message": "Goal should be positive."},
                 HTTPStatus.BAD_REQUEST,
             )
 
-        months: int = math.ceil(request.json["goal"] / request.json["monthly_savings"])
+        months: int = math.ceil(goal / monthly_savings)
         return make_response(
             {
                 "months": months,
