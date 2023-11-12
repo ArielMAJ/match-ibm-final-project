@@ -1,20 +1,29 @@
-<form id="mainAppForm" class="flex-column fit-content">
-  <fieldset>
-    <legend>Meta Financeira</legend>
-    <input autofocus name="goal" placeholder="Sua meta aqui" type="text" />
-  </fieldset>
+<div>
+  <form class="flex-column" action="/goal/" method="POST">
+    <fieldset>
+      <legend class="small-text">Meta Financeira</legend>
+      <input
+        autofocus
+        class="small-text"
+        name="goal"
+        placeholder="Sua meta aqui."
+        type="text"
+      />
+    </fieldset>
 
-  <fieldset>
-    <legend>Economia mensal</legend>
-    <input
-      autofocus
-      name="monthly_savings"
-      placeholder="Sua economia mensal."
-      type="text"
-    />
-  </fieldset>
-  <button id="mainAppFormSubmitButton" type="button">Calcular!</button>
-</form>
-<form class="flex-column fit-content" action="/" method="get">
-  <input type="submit" value="Apagar" />
-</form>
+    <fieldset>
+      <legend class="small-text">Economia mensal</legend>
+      <input
+        autofocus
+        class="small-text"
+        name="monthly_savings"
+        placeholder="Sua economia mensal."
+        type="text"
+      />
+    </fieldset>
+    <input class="small-text" type="submit" value="Calcular" />
+  </form>
+  <form class="flex-column" action="/" method="GET">
+    <input class="small-text" type="submit" value="Apagar" />
+  </form>
+</div>
