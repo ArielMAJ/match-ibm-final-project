@@ -59,7 +59,7 @@ Caso não queira instalar o `make`, execute os comandos do arquivo `Makefile` ma
 
 ## Autores
 
-- [@ArielMAJ](https://ariel.artadevs.tech/): ariel.maj@hotmail.com
+- [@ArielMAJ](https://ariel.artadevs.tech/): almeidajr.ariel@gmail.com
 
 ## Licença
 
