@@ -55,7 +55,7 @@ Caso não queira instalar o `make`, execute os comandos do arquivo `Makefile` ma
 
 - `pip install poetry`;
 - `poetry install`;
-- `poetry run python api/index.py`;
+- `poetry run python -m api.index`;
 
 ## Autores
 

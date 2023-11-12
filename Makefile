@@ -1,5 +1,10 @@
+ifneq ("$(wildcard .env)","")
+	include .env
+	export
+endif
+
 run:
-	poetry run python api/index.py
+	poetry run python -m api.index
 
 install:
 	pip install poetry
