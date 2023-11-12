@@ -6,6 +6,9 @@ endif
 run:
 	poetry run python -m api.index
 
+test:
+	poetry run python -m pytest .
+
 install:
 	pip install poetry
 	poetry install
