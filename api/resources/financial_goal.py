@@ -97,5 +97,5 @@ class FinancialGoalResource(Resource):
         )
 
     @staticmethod
-    def caculate_months(goal: int | float, monthly_savings: int | float) -> int:
+    def caculate_months(goal, monthly_savings):
         return math.ceil(goal / monthly_savings)
