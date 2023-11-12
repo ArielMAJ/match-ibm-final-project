@@ -1,3 +1,8 @@
+ifneq ("$(wildcard .env)","")
+	include .env
+	export
+endif
+
 run:
 	poetry run python api/index.py
 
