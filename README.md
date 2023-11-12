@@ -24,8 +24,8 @@ O projeto consiste em uma aplicação Web (front e back-end), desenvolvido com o
 ## Descrição
 
 - Desenvolvimento de aplicação Web com back-end em Python;
-- Aplicação deve calcular **quanto tempo** levará para atingir a "**meta financeira**" com base em
-  uma **economia mensal** definida. - A meta financeira pode ser, por exemplo uma economia para uma viagem, compra importante ou qualquer objetivo financeiro.
+- Aplicação deve calcular **quanto tempo** levará para atingir a "**meta financeira**" com base em uma **economia mensal** definida.
+  - A meta financeira pode ser, por exemplo uma economia para uma viagem, compra importante ou qualquer objetivo financeiro.
 
 ## Etapas/Fluxo do app (Requisitos Mínimos do Projeto)
 
