@@ -65,3 +65,33 @@
   border: #132a13 1px solid;
   box-shadow: 0 0 10px 0 var(--dark-green);
 }
+
+form {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 0;
+  width: 100%;
+}
+
+input[type="submit"] {
+  margin-top: 1px;
+  padding: 1px;
+}

@@ -1,6 +1,10 @@
 {% extends "layout.html" %} {% block body %}
 <div class="box flex-column fit-content">
-  <h1>Initial Page</h1>
+  <h1>Calculadora</h1>
+  {% include 'form.html' %} {% if message %}
+  <div class="box flex-column fit-content">
+    <h2>{{ message }}</h2>
+  </div>
+  {% endif %}
 </div>
-
 {% endblock %}
