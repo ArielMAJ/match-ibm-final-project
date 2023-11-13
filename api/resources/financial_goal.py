@@ -20,7 +20,11 @@ class FinancialGoalResource(Resource):
             return response
 
         return make_response(
-            render_template("index.html", message=response.json.pop("message")),
+            render_template(
+                "index.html",
+                message=response.json.pop("message"),
+                show_error_pop_up=response.status_code != HTTPStatus.OK,
+            ),
             HTTPStatus.OK,
             {"Content-Type": "text/html; charset=utf-8"},
         )
@@ -65,19 +69,19 @@ class FinancialGoalResource(Resource):
                 },
                 HTTPStatus.BAD_REQUEST,
             )
-        if monthly_savings <= 0:
-            return make_response(
-                {
-                    "months": None,
-                    "message": "Economia Mensal deve ser um valor numérico positivo.",
-                },
-                HTTPStatus.BAD_REQUEST,
-            )
         if goal <= 0:
             return make_response(
                 {
                     "months": None,
                     "message": '"Meta Financeira" deve ser um valor numérico positivo.',
+                },
+                HTTPStatus.BAD_REQUEST,
+            )
+        if monthly_savings <= 0:
+            return make_response(
+                {
+                    "months": None,
+                    "message": "Economia Mensal deve ser um valor numérico positivo.",
                 },
                 HTTPStatus.BAD_REQUEST,
             )
