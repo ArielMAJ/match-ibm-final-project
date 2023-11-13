@@ -6,4 +6,4 @@ from flask import Blueprint
 from flask_restful import Api
 
 FINANCIAL_GOAL_BLUEPRINT = Blueprint("financial_goal", __name__)
-Api(FINANCIAL_GOAL_BLUEPRINT).add_resource(FinancialGoalResource, "/goal/")
+Api(FINANCIAL_GOAL_BLUEPRINT).add_resource(FinancialGoalResource, "/")

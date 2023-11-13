@@ -1,29 +1,73 @@
 <div>
-  <form class="flex-column" action="/goal/" method="POST">
-    <fieldset>
-      <legend class="small-text">Meta Financeira</legend>
-      <input
-        autofocus
-        class="small-text"
-        name="goal"
-        placeholder="Sua meta aqui."
-        type="text"
-      />
-    </fieldset>
-
-    <fieldset>
+  <form
+    id="myForm"
+    class="flex-column form-anticlear"
+    action="/"
+    method="POST"
+    onsubmit="btnFunction('#submitBtn', '#submitBtnText', true);delaySubmit(event);"
+  >
+    <div class="flex-row">
+      <fieldset class="relative-container">
+        <legend class="small-text">Meta Financeira</legend>
+        <input
+          class="small-text"
+          autofocus
+          autocomplete="off"
+          name="goal"
+          placeholder="Sua meta aqui."
+          type="text"
+          required
+        />
+        <div class="tooltip">
+          <i class="fas fa-question-circle"></i>
+          <span class="tooltiptext"
+            >Digite aqui uma meta financeira que deseja alcançar (apenas
+            números). Ex.: 4899</span
+          >
+        </div>
+      </fieldset>
+    </div>
+    <fieldset class="relative-container">
       <legend class="small-text">Economia mensal</legend>
       <input
-        autofocus
         class="small-text"
+        autofocus
+        autocomplete="off"
         name="monthly_savings"
         placeholder="Sua economia mensal."
         type="text"
+        required
       />
+      <div class="tooltip">
+        <i class="fas fa-question-circle"></i>
+        <span class="tooltiptext"
+          >Digite aqui um valor mensal médio que você pretende guardar (apenas
+          números). Ex.: 370</span
+        >
+      </div>
     </fieldset>
-    <input class="small-text" type="submit" value="Calcular" />
+    <button id="submitBtn" type="submit">
+      <p id="submitBtnText">Calcular</p>
+      <div class="check-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+          <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+        </svg>
+      </div>
+    </button>
   </form>
-  <form class="flex-column" action="/" method="GET">
-    <input class="small-text" type="submit" value="Apagar" />
+  <form
+    class="flex-column"
+    action="/"
+    method="GET"
+    onsubmit="btnFunction('#clearBtn', '#clearBtnText', false);clearForm(event)"
+  >
+    <button id="clearBtn" type="submit">
+      <p id="clearBtnText">Apagar</p>
+      <div class="check-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+          <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+        </svg>
+      </div>
+    </button>
   </form>
 </div>
