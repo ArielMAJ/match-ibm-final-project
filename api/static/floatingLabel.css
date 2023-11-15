@@ -1,0 +1,19 @@
+/* Floating label */
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: -25px;
+  bottom: 0px;
+  left: 10px;
+  font-size: 1.1em;
+  opacity: 1;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 1.4%;
+  top: 20%;
+  transition: 0.2s ease all;
+  font-size: 1.3em;
+}
+/* Floating label */

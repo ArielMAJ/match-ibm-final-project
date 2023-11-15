@@ -1,35 +1,40 @@
-{% extends "layout.html" %} {% block body %}
-<div id="main-container" class="box flex-column fixed-responsive-width">
-  <div class="flex-row">
-    <div class="flex-column">
-      <h1 class="large-text">InvestMax</h1>
-      <h3>Planeje seu futuro!</h3>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/static/img/icons8-money-with-wings-emoji-96.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/static/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/toast.css" />
+    <link rel="stylesheet" type="text/css" href="/static/tooltip.css" />
+    <link rel="stylesheet" type="text/css" href="/static/submitButton.css" />
+    <link rel="stylesheet" type="text/css" href="/static/floatingLabel.css" />
+    <script src="/static/script.js"></script>
+    <title>J Valle & A Almeida Investimentos Co.</title>
 
-  <div class="flex-row">{% include 'form.html' %}</div>
-
-  <br />
-
-  {% if show_error_pop_up %}
-  <div class="wrapper">
-    <div id="toast">
-      <div class="container-1">
-        <i class="fa-solid fa-square-xmark fa-shake" style="color: #ff2445"></i>
-      </div>
-      <div class="container-2">
-        <div class="small-text">{{ message }}</div>
-      </div>
-      <button id="close" onclick="closeToast()">&times;</button>
-    </div>
-  </div>
-  <script>
-    showToast();
-  </script>
-  {% elif message %}
-  <div id="response-message" class="flex-row box small-text">
-    <h3>{{ message }}</h3>
-  </div>
-  {% endif %}
-</div>
-{% endblock %}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {% include 'body/body.html' %}
+  </body>
+  <script src="https://cdn.jsdelivr.net/gh/akjpro/form-anticlear/base.js"></script>
+</html>
