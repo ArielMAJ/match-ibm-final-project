@@ -57,19 +57,10 @@
 }
 
 .box {
-  /* width: fit-content; */
-  /* height: fit-content; */
-  background: linear-gradient(
-    90deg,
-    var(--dark-green) -100%,
-    var(--fern-green) 45%,
-    var(--fern-green) 58%,
-    var(--dark-green) 200%
-  );
   padding: 20px;
   border-radius: 10px;
-  border: #295b29 1px solid;
-  box-shadow: 0 0 10px 0 var(--dark-green);
+  border: var(--corTexto1Clara) 1px solid;
+  box-shadow: 0 0 10px 0 var(--corTexto1Clara);
   margin: 10px;
   text-wrap: wrap;
 }
