@@ -87,3 +87,20 @@ function delaySubmit(event) {
     form.submit();
   }, 2000);
 }
+
+function scrollFormResponseIntoView() {
+  let responseMessage = document.getElementById("response-message");
+
+  if (responseMessage) {
+    // Scroll to the element if it exists
+    let formSection = document.getElementById("formulario");
+    formSection.scrollIntoView({
+      behavior: "smooth", // Use smooth scrolling
+      block: "start", // Align the top of the element with the top of the viewport
+    });
+  }
+}
+
+setTimeout(() => {
+  scrollFormResponseIntoView();
+}, 800);
