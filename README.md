@@ -41,8 +41,11 @@ O projeto consiste em uma aplicação Web (front e back-end), desenvolvido com o
 
 ## Ambientes de Desenvolvimento e Homologação
 
-- Desenvolvido e testado com Python 3.11.5 no Windows 11;
-- Deploy no Vercel com Python 3.9 (Linux);
+- Localmente: Desenvolvido e testado com Python 3.11.5 no Windows 11;
+  - Veja [como executar o projeto](#como-executar-o-projeto).
+- Homologação e Produção: Deploy no Vercel com Python 3.9 (Linux);
+  - Homologação: https://hml.economias.artadevs.tech/
+  - Produção: https://economias.artadevs.tech/
 
 ## Como executar o projeto
 
