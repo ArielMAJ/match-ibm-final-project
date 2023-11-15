@@ -1,0 +1,72 @@
+<form
+  id="myForm"
+  class="flex-column form-anticlear"
+  action="/"
+  method="POST"
+  onsubmit="btnFunction('#submitBtn', '#submitBtnText', true);delaySubmit(event);"
+>
+  <fieldset class="relative-container">
+    <legend class="small-text"></legend>
+    <div>
+      <input
+        class="small-text"
+        autofocus
+        autocomplete="off"
+        name="goal"
+        type="text"
+        required
+      />
+      <span class="floating-label">Meta Financeira</span>
+    </div>
+
+    <div class="tooltip">
+      <i class="fas fa-question-circle"></i>
+      <span class="tooltiptext"
+        >Digite aqui a meta financeira que deseja alcançar (apenas números).
+        Ex.: 4899</span
+      >
+    </div>
+  </fieldset>
+  <fieldset class="relative-container">
+    <legend class="small-text"></legend>
+    <input
+      class="small-text"
+      autofocus
+      autocomplete="off"
+      name="monthly_savings"
+      type="text"
+      required
+    />
+    <span class="floating-label">Economia mensal</span>
+    <div class="tooltip">
+      <i class="fas fa-question-circle"></i>
+      <span class="tooltiptext"
+        >Digite aqui o valor mensal médio que você pretende investir (apenas
+        números). Ex.: 370</span
+      >
+    </div>
+  </fieldset>
+  <button id="submitBtn" type="submit">
+    <p id="submitBtnText">Calcular</p>
+    <div class="check-box">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+        <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+      </svg>
+    </div>
+  </button>
+</form>
+<form
+  class="flex-column"
+  action="/"
+  method="GET"
+  onsubmit="btnFunction('#clearBtn', '#clearBtnText', false);clearForm(event)"
+>
+  <button id="clearBtn" type="submit">
+    <p id="clearBtnText">Apagar</p>
+    <div class="check-box">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+        <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+      </svg>
+    </div>
+  </button>
+</form>

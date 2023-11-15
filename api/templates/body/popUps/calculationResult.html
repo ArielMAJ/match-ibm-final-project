@@ -1,0 +1,20 @@
+{% if show_error_pop_up %}
+<div class="wrapper">
+  <div id="toast">
+    <div class="container-1">
+      <i class="fa-solid fa-square-xmark fa-shake" style="color: #ff2445"></i>
+    </div>
+    <div class="container-2">
+      <div class="small-text">{{ message }}</div>
+    </div>
+    <button id="close" onclick="closeToast()">&times;</button>
+  </div>
+</div>
+<script>
+  showToast();
+</script>
+{% elif message %}
+<div id="response-message" class="small-text">
+  <h3>{{ message }}</h3>
+</div>
+{% endif %}

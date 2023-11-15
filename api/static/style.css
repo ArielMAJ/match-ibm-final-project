@@ -1,7 +1,16 @@
+* {
+  font-family: Playfair Display;
+}
+
 :root {
   --dark-green: #132a13;
   --sea-green: #198754;
   --fern-green: #337133;
+
+  --corPrincipal: rgb(224, 224, 117);
+  --corSecundaria: black;
+  --corTexto1: rgb(26, 27, 86);
+  --corTexto1Clara: rgb(27, 29, 125);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -72,17 +81,17 @@ form {
 }
 
 fieldset {
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     var(--sea-green) -100%,
     var(--fern-green) 20%,
     #1a3a1a 55%,
     var(--fern-green) 90%,
     var(--sea-green) 200%
-  );
+  ); */
   border-radius: 10px;
-  /* padding: 0; */
-  margin-top: 10px;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 legend {
@@ -93,17 +102,18 @@ legend {
 
 input[type="text"] {
   box-sizing: border-box;
-  padding: 5px;
+  padding: 0px;
   margin: 0;
   width: 100%;
   background: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: black;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 button[type="submit"] {
-  margin-top: 7px;
+  margin-top: 15px;
   /* padding: 8px; */
   /* border-radius: 5px; */
 }
@@ -126,173 +136,119 @@ button[type="submit"] {
   font-size: 1.3rem;
 }
 
-/* Tooltip */
-.tooltip {
-  position: absolute;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-  top: -40%;
-  right: -3%;
+#response-message {
+  margin: 15px auto;
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 200px;
-  background-color: rgba(0, 0, 0, 0.342);
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 7px;
-  margin: 5px;
+/*  */
 
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
+#cabecalho {
+  background: url(../static/img/bgazul.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  /* background-repeat: no-repeat; */
+  justify-content: space-around; /*igualmente espaçado em relação às bordas*/
+  color: var(--corPrincipal);
+  padding: 2em;
+  display: grid; /*permite manipular os elementos filhos*/
+  place-items: center;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
-
-.relative-container {
-  position: relative;
-}
-/* Tooltip */
-
-/* Toast */
-.wrapper {
-  width: 520px;
-  padding: 30px 20px;
-  position: absolute;
-  bottom: 50px;
-  right: 0;
-  overflow: hidden;
-}
-
-#show-toast {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  right: 0%;
-  background-color: #101020;
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#toast {
-  width: 480px;
-  height: 110px;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 10px 20px rgba(75, 50, 50, 0.05);
-  border-left: 8px solid #d74764;
-  border-radius: 7px;
-  display: grid;
-  grid-template-columns: 1.2fr 6fr 0.5fr;
-  transform: translate(400px);
-  transition: 1s;
-}
-
-.container-1,
-.container-2 {
-  align-self: center;
-}
-
-.container-1 i {
+h1 {
   font-size: 50px;
-  color: #47d764;
 }
 
-.container-2 p:first-child {
-  color: #101020;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.container-2 p:last-child {
-  font-size: 12px;
-  color: #656565;
-  font-weight: 400;
-}
-
-#toast button {
-  align-self: flex-start;
-  background-color: transparent;
+p {
   font-size: 25px;
-  line-height: 0;
-  color: #656565;
-  cursor: pointer;
 }
 
-#close {
-  border: None;
+#formulario {
+  min-height: 730px;
+  background: url(../static/img/glass-jar-full-money-front-decreasing-stacked-coins-against-white-background.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+  margin: auto;
 }
-/* Toast */
 
-/* Submit button */
-/* button inside forms */
+#formulario-cadastro p {
+  color: var(--corTexto1);
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
 
-form button {
-  width: auto;
-  height: 50px;
+.grupo-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.8em;
+}
+
+.grupo-form label {
+  color: var(--corTexto1);
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+
+.grupo-form input {
+  padding: 6px 8px;
+  border-radius: 5px;
   border: none;
-  outline: none;
-  background: #2f2f2f;
-  color: #fff;
-  font-size: 22px;
-  border-radius: 10px;
+  outline: none; /*remove a linha ao redor do campo*/
+}
+
+input[type="button"] {
+  background-color: var(--corTexto1);
+  background-size: cover;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /*aciona a mãozinha ao passar o mouse no botão*/
+  opacity: 0.5px;
+}
+
+.botao.hover {
+  /*ao passar o cursor por cima do botão*/
+  opacity: 1px;
+}
+
+#rodape {
+  background-color: var(--corTexto1);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5px;
+  color: var(--corPrincipal);
+  font-weight: bold;
+  padding: 2em;
   text-align: center;
-  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
 }
 
-.check-box {
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
-  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  right: -40px;
-  opacity: 0;
+#contatos {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.check-box svg {
-  width: 40px;
-  margin: 5px;
+#nomes {
+  font-size: 18 px;
+  font-weight: normal;
 }
 
-svg path {
-  stroke-width: 3;
-  stroke: #fff;
-  stroke-dasharray: 34;
-  stroke-dashoffset: 34;
-  stroke-linecap: round;
-}
+@media (max-width: 450px) {
+  h1 {
+    font-size: 40px;
+  }
 
-.active {
-  background: var(--dark-green);
-  transition: 0.6s;
-}
+  p {
+    font-size: 20px;
+  }
 
-.active .check-box {
-  right: 0;
-  opacity: 1;
-  transition: 0.6s;
+  #formulario {
+    height: 870px;
+  }
 }
-
-.active p {
-  margin-right: 110px;
-  transition: 0.6s;
-}
-
-.active svg path {
-  stroke-dashoffset: 0;
-  transition: 0.6s;
-  transition-delay: 0.6s;
-}
-/* Submit button */
