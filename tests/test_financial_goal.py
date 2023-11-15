@@ -66,7 +66,7 @@ LOGGER = logging.getLogger(__name__)
 )
 def test_financial_goal(test_client, goal, monthly_savings, result, status_code):
     response = test_client.post(
-        "/goal/",
+        "/",
         content_type="application/json",
         data=json.dumps({"goal": goal, "monthly_savings": monthly_savings}),
     )
