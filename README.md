@@ -8,6 +8,7 @@
 - [Etapas/Fluxo do app (Requisitos Mínimos do Projeto)](#etapasfluxo-do-app-requisitos-mínimos-do-projeto)
 - [Ambientes de Desenvolvimento e Homologação](#ambientes-de-desenvolvimento-e-homologação)
 - [Como executar o projeto](#como-executar-o-projeto)
+- [Vídeo do projeto](#vídeo-do-projeto)
 - [Autores](#autores)
 - [Licença](#licença)
 
@@ -57,9 +58,14 @@ Caso não queira instalar o `make`, execute os comandos do arquivo `Makefile` ma
 - `poetry install`;
 - `poetry run python -m api.index`;
 
+## Vídeo do projeto
+
+https://github.com/ArielMAJ/match-ibm-final-project/assets/69123486/2cca1ee1-bad9-44bd-81a5-9ad6185ffa6a
+
 ## Autores
 
 - [@ArielMAJ](https://ariel.artadevs.tech/): almeidajr.ariel@gmail.com
+- [@João Pedro Valle](https://github.com/Joaopedrovalle3): jtour.rio@gmail.com
 
 ## Licença
 
