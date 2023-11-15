@@ -5,10 +5,10 @@
 - [Sobre](#sobre)
 - [Projeto Escolhido](#projeto-escolhido)
 - [Descrição](#descrição)
-- [Etapas/Fluxo do app (Requisitos Mínimos do Projeto)](#etapasfluxo-do-app-requisitos-mínimos-do-projeto)
+- [Etapas/Fluxo do app (Requisitos Minimos do Projeto)](#etapasfluxo-do-app-requisitos-minimos-do-projeto)
 - [Ambientes de Desenvolvimento e Homologação](#ambientes-de-desenvolvimento-e-homologação)
 - [Como executar o projeto](#como-executar-o-projeto)
-- [Vídeo do projeto](#vídeo-do-projeto)
+- [Video do projeto](#vídeo-do-projeto)
 - [Autores](#autores)
 - [Licença](#licença)
 
